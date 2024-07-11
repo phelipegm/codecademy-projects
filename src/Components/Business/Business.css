@@ -1,0 +1,52 @@
+p {
+    font-family: 'Trebuchet MS';
+}
+
+.business {
+    margin: 20px;
+}
+
+.containerInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftAlignment {
+    text-align: left;
+    margin-left: -4px;
+}
+
+.rightAlignment {
+    text-align: right;
+}
+
+.image {
+    margin-bottom: 10px;
+    float: left;
+    width: 250px;
+    height: 250px;
+}
+
+.pizzaPlace {
+    font-size: 21px;
+    margin: 5px;
+    color: black;
+    text-align: left;
+    margin-left: -4px;
+}
+
+.addressInfo {
+    font-size: 14px;
+    margin: -1px;
+    color: black;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.restaurantInfo {
+    font-size: 14px;
+    margin: -1px;
+    color: black;
+    text-align: right;
+    margin-left: -4px;
+}

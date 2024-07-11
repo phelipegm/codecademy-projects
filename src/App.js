@@ -1,26 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import SearchBar from './SearchBar';
-import Business from './Business';
+import SearchBar from './Components/SearchBar/SearchBar';
+import BusinessList from './Components/BusinessList/BusinessList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <SearchBar />
-        <Business />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BusinessList />
       </header>
     </div>
   );
