@@ -1,0 +1,12 @@
+.container {
+    background-color: #C39948;
+    height: 50px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -1px;
+    font-family: 'Trebuchet MS';
+    font-size: 40px;
+}

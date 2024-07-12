@@ -3,19 +3,20 @@ import './SearchBar.css';
 
 function SearchBar() {
     return (
-        <div>
+        <div className='mainContainer'>
             <form>
                 <div>
-                    <input type="submit" value="Best Match" />
-                    <input type="submit" value="Highest Rated" />
-                    <input type="submit" value="Most Reviewed" />
+                    <input className="secondaryButton" type="submit" value="Best Match" />
+                    <input className="secondaryButton" type="submit" value="Highest Rated" />
+                    <input className="secondaryButton" type="submit" value="Most Reviewed" />
+                    <hr className='horizontalLine'></hr>
                 </div>
                 <div>
-                    <input type="text" placeholder="Search businesses"/>
-                    <input type="text" placeholder="Where?"/>
+                    <input className="inputText" type="text" placeholder="Search businesses"/>
+                    <input className="inputText" type="text" placeholder="Where?"/>
                 </div>
                 <div>
-                    <input type="submit" value="Let's Go" />
+                    <input className="mainButton" type="submit" value="Let's Go" />
                 </div>
             </form>
         </div>

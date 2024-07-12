@@ -1,0 +1,70 @@
+input {
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 100px;
+}
+
+.mainContainer {
+    width: 100%;
+    background-image: url("./ravenous_background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+    
+}
+
+.inputText {
+    padding: 10px 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputText + .inputText {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.mainButton {
+    background-color: #C39948;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 15px;
+    margin-top: 50px;
+}
+
+.mainButton:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.secondaryButton {
+    border: none;
+    border-radius: 2px;
+    padding: 15px 60px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+.secondaryButton:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.horizontalLine {
+    margin-top: -5px;
+    width: 35%;
+}
+
+
