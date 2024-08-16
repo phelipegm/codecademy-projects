@@ -15,6 +15,149 @@ const businesses = [
     category: 'ITALIAN',
     rating: 4.5,
     reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
+  },
+  {
+    image: pizza,
+    name: 'MarginOTTO Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Bordertown',
+    state: 'NY',
+    zipcode: '10101',
+    category: 'ITALIAN',
+    rating: 4.5,
+    reviewCount: 90
   }
 ];
 
