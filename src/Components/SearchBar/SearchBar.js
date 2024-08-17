@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
     const [business, setBusiness] = useState("");
     const [location, setLocation] = useState("");
     const [sortOption, setSortOption] = useState("");
@@ -18,10 +18,6 @@ function SearchBar() {
 
     const handleSearchLocationChange = event => {
         setLocation(event.target.value);
-    };
-
-    const handleSearchClick = event => {
-        console.log(`Searching Yelp with ${business}, ${location}, ${sortOption}`);
     };
 
     const getSortOptionColor = sortOptionId => {
@@ -44,7 +40,7 @@ function SearchBar() {
                 <input className="inputText" type="text" placeholder="Where?" value={location} onChange={handleSearchLocationChange} />
             </div>
             <div>
-                <input className="mainButton" type="button" value="Let's Go" onClick={handleSearchClick} />
+                <input className="mainButton" type="button" value="Let's Go" onClick={props.onSearchClick(business, location, sortOption)} />
             </div>
         </div>
     );

@@ -2,171 +2,25 @@ import './App.css';
 import Banner from './Components/Banner/Banner';
 import SearchBar from './Components/SearchBar/SearchBar';
 import BusinessList from './Components/BusinessList/BusinessList';
-import pizza from './pizza.jpg'
-
-const businesses = [
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  },
-  {
-    image: pizza,
-    name: 'MarginOTTO Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'NY',
-    zipcode: '10101',
-    category: 'ITALIAN',
-    rating: 4.5,
-    reviewCount: 90
-  }
-];
+import searchBusinesses from './utils/mockedBusinesses';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [businesses, setBusinesses] = useState([]);
+
+  useEffect(() => {
+    setBusinesses(searchBusinesses("", "", "").sort((a, b) => b.rating - a.rating));
+  }, []);
+
+  const onSearchClick = (business, location, sortOption) => {
+    setBusinesses(searchBusinesses(business, location, sortOption));
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <Banner />
-        <SearchBar />
+        <SearchBar onSearchClick={onSearchClick} />
         <BusinessList businesses={businesses} />
       </header>
     </div>
