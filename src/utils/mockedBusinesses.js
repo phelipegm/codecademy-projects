@@ -1,8 +1,32 @@
 const searchBusinesses = (business, location, sortOption) => {
+    let result = mockedBusinesses;
     if (business !== "") {
-        return mockedBusinesses.filter(item => item.name === business);
+        result = result.filter(item =>
+            item.name.toLowerCase() === business.toLowerCase() ||
+            item.category.toLowerCase() === business.toLowerCase()
+        );
     }
-    return mockedBusinesses;
+    if (location !== "") {
+        result = result.filter(item =>
+            item.address.toLowerCase() === location.toLowerCase() ||
+            item.city.toLowerCase() === location.toLowerCase() ||
+            item.state.toLowerCase() === location.toLowerCase() ||
+            item.zipcode.toLowerCase() === location.toLowerCase()
+        )
+    }
+    if (sortOption !== "") {
+        switch (sortOption) {
+            case "Best Match":
+                break;
+            case "Highest Rated":
+                result = result.slice().sort((a,b) => b.rating - a.rating);
+                break;
+            case "Most Reviewed":
+                result = result.slice().sort((a,b) => parseInt(b.reviewCount) - parseInt(a.reviewCount));
+                break;
+        }
+    }
+    return result;
 };
 
 // Function to dynamically import images
@@ -117,7 +141,7 @@ const mockedBusinesses = [
     },
     {
         image: images['business9'],
-        name: 'Grecian Delights',
+        name: 'Greek Restaurant',
         address: '1011 Athens Dr',
         city: 'Los Angeles',
         state: 'CA',
@@ -227,7 +251,7 @@ const mockedBusinesses = [
     },
     {
         image: images['business19'],
-        name: 'Bagel Brothers',
+        name: 'Pain Au Chocolat Brothers',
         address: '2020 Brooklyn Rd',
         city: 'New York',
         state: 'NY',

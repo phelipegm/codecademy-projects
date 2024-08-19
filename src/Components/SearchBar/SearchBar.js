@@ -5,7 +5,7 @@ function SearchBar(props) {
     const [business, setBusiness] = useState("");
     const [location, setLocation] = useState("");
     const [sortOption, setSortOption] = useState("");
-    const [selectedSortOption, setSelectedSortOption] = useState(null);
+    const [selectedSortOption, setSelectedSortOption] = useState("");
 
     const handleSortOptionClick = event => {
         setSelectedSortOption(event.target.id);
@@ -30,9 +30,8 @@ function SearchBar(props) {
     return (
         <div className='mainContainer'>
             <div>
-                <input className="secondaryButton" style={{ color: getSortOptionColor('sort0') }} id="sort0" type="button" value="Best Match" onClick={handleSortOptionClick} />
-                <input className="secondaryButton" style={{ color: getSortOptionColor('sort1') }} id="sort1" type="button" value="Highest Rated" onClick={handleSortOptionClick} />
-                <input className="secondaryButton" style={{ color: getSortOptionColor('sort2') }} id="sort2" type="button" value="Most Reviewed" onClick={handleSortOptionClick} />
+                <input className="secondaryButton" style={{ color: getSortOptionColor('sort0') }} id="sort0" type="button" value="Highest Rated" onClick={handleSortOptionClick} />
+                <input className="secondaryButton" style={{ color: getSortOptionColor('sort1') }} id="sort1" type="button" value="Most Reviewed" onClick={handleSortOptionClick} />
                 <hr className='horizontalLine'></hr>
             </div>
             <div>
@@ -40,7 +39,7 @@ function SearchBar(props) {
                 <input className="inputText" type="text" placeholder="Where?" value={location} onChange={handleSearchLocationChange} />
             </div>
             <div>
-                <input className="mainButton" type="button" value="Let's Go" onClick={props.onSearchClick(business, location, sortOption)} />
+                <input className="mainButton" type="button" value="Let's Go" onClick={() => props.onSearchClick(business, location, sortOption)} />
             </div>
         </div>
     );

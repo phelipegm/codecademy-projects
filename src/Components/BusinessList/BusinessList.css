@@ -1,5 +1,11 @@
+p {
+    color: black;
+    font-family: 'Trebuchet MS';
+}
+
 .businessList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 350px;
 }
